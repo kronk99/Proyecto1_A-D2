@@ -5,7 +5,6 @@
 #ifndef PROYECTO1_A_D2_GAME_H
 #define PROYECTO1_A_D2_GAME_H
 #include <SDL2/SDL.h>
-
 class Game {
 private:
     bool isRunning;

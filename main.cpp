@@ -4,8 +4,23 @@
 
 #include <iostream>
 //#include <SDL2/SDL.h>
+#include "Game.h"
 using namespace std;
 int main(int argc , char *argv[]){
+    Game *game = new Game();
+    //hice el init como el verdadero constructor de la ventana de juegoxd.
+    game->init("juego1" , SDL_WINDOWPOS_CENTERED , SDL_WINDOWPOS_CENTERED ,600 ,600 ,false);
+    while(game->running()){
+        game->eventHandler(); //currently not working
+        game->update();
+        game->render();
+    }
+    game->clean();
+
+
+
+
+
     /*
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_Window *window = SDL_CreateWindow("title",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,600,400,SDL_WINDOW_SHOWN);
