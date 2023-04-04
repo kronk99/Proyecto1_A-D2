@@ -1,12 +1,130 @@
 //
 // Created by huevitoentorta on 17/03/23.
-//
-
+// revisar si en el cmake serial.cc no me hace daño al programa,ver el cmake
+//ARREGLAR E INCLUDE DE SERIAL
 #include <iostream>
+#include <csignal>
+#include <unistd.h>
+#include "libserial/SerialStream.h"
 //#include <SDL2/SDL.h>
+using namespace LibSerial;
 #include "Game.h"
 using namespace std;
 int main(int argc , char *argv[]){
+    constexpr const char* const SERIAL_PORT_1 = "/dev/ttyUSB0" ;
+    SerialStream serial_stream ;
+
+    try
+    {
+        // Open the Serial Port at the desired hardware port.
+        serial_stream.Open(SERIAL_PORT_1) ;
+    }
+    catch (const OpenFailed&)
+    {
+        std::cerr << "The serial port did not open correctly." << std::endl ;
+        return EXIT_FAILURE ;
+    }
+    // Set the baud rate of the serial port.
+    serial_stream.SetBaudRate(BaudRate::BAUD_9600) ;
+
+    // Set the number of data bits.
+    serial_stream.SetCharacterSize(CharacterSize::CHAR_SIZE_8) ;
+
+    // Turn off hardware flow control.
+    serial_stream.SetFlowControl(FlowControl::FLOW_CONTROL_NONE) ;
+
+    // Disable parity.
+    serial_stream.SetParity(Parity::PARITY_NONE) ;
+
+    // Set the number of stop bits.
+    serial_stream.SetStopBits(StopBits::STOP_BITS_1) ;
+
+    // Wait for data to be available at the serial port.
+    /*
+    while(serial_stream.rdbuf()->in_avail() == 0)
+    {
+        usleep(1000);
+    }
+    int a=0;
+    // Keep reading data from serial port and print it to the screen.
+    while(serial_stream.IsDataAvailable()){
+        // Variable to store data coming from the serial port.
+        char data_byte ;
+        // Read a single byte of data from the serial port.
+        serial_stream.get(data_byte) ;
+        // Show the user what is being read from the serial port.
+        std::cout << data_byte<<endl ;
+        a++;
+        // Wait a brief period for more data to arrive.
+    }
+    cout<<"el numero de ciclos es:"<<a<<endl;*/
+
+    int flag = 0;
+    int cicles = 0;
+    while(flag ==0){
+        //cambiarlo a un if este ciclo while
+        if(serial_stream.rdbuf()->in_avail() != 0){
+            usleep(2000) ;
+            int multiplier = 10; //PREGUNTAR AL TUTOR SI HACERLA CONST
+            int dato=0; //inicia en 0
+            //POR QUE NO SE SI AL REINICIAR EL CICLO WHILE SE ELIMINA DEL HEAP.
+            while(serial_stream.IsDataAvailable()){ //imprime 4 nulls por algun
+                //NOTA PARA MAÑANA, SI NO LEER EL CICLO Y CONCATENAR STRINGS.
+                //NOTA 2 probar si o si concatenar o enviar data y leerla.
+                //SI NO SIRVE ASI, SIMPLEMENTE ENVIAR INTS Y QUE LOS LEA.
+
+                // Variable to store data coming from the serial port.
+                char data_byte ;
+                // Read a single byte of data from the serial port.
+                serial_stream.get(data_byte) ;
+                int variable = int(data_byte)-48;
+                if(variable >=0){ //esto me esta jodiendo los numeros
+                    //cout<<"el numero como char es:"<<data_byte<<endl;
+                    //cout<<"el numero es:"<<variable<<endl;
+                    dato=dato * multiplier+variable;
+
+                }
+                /*
+                if(data_byte != '1'){
+                    std::cout << data_byte <<endl;
+                    cicles+=1;
+                }
+                else{
+                    cout<<"el numero impreso es el :"<<data_byte<<endl;
+                }*/
+                //cout<<"num ciclos"<<cicles<<endl;
+                //cout<<"numero de ciclos:"<<cicles<<endl;
+                // Wait a brief period for more data to arrive.
+                usleep(1000) ;
+            }
+            cout<<"el numero final es:"<<dato<<endl;
+        }
+    }
+    // Successful program completion.
+
+// Create and open the serial port for communication.
+    /*SerialPort   my_serial_port( "/dev/ttyS0" );
+    SerialStream my_serial_stream( "/dev/ttyUSB0" );
+    //my_serial_port.SetBaudRate( BaudRate::BAUD_9600 );
+    my_serial_stream.SetBaudRate( BaudRate::BAUD_9600  );
+    //my_serial_port.SetCharacterSize( CharacterSize::CHAR_SIZE_8 );
+    my_serial_stream.SetCharacterSize( CharacterSize::CHAR_SIZE_8 );
+    // Set the desired flow control type using a SetFlowControl() method call.
+// Available flow control types are defined in SerialStreamConstants.h.
+    //my_serial_port.SetFlowControl( FlowControl::FLOW_CONTROL_HARDWARE );
+    my_serial_stream.SetFlowControl( FlowControl::FLOW_CONTROL_HARDWARE );
+    // Set the desired parity type using a SetParity() method call.
+// Available parity types are defined in SerialStreamConstants.h.
+    //my_serial_port.SetParity( Parity::PARITY_ODD);
+    my_serial_stream.SetParity( Parity::PARITY_ODD);
+    //my_serial_port.SetStopBits(StopBits::STOP_BITS_1);
+    my_serial_stream.SetStopBits(StopBits::STOP_BITS_1);
+    int timeout = 25;
+    char nextchar;
+    //my_serial_port.ReadByte(nextchar,25);
+    my_serial_stream.get(nextchar);
+    cout<<nextchar<<endl;*/
+    /*
     Game *game = new Game();
     //hice el init como el verdadero constructor de la ventana de juegoxd.
     game->init("juego1" , SDL_WINDOWPOS_CENTERED , SDL_WINDOWPOS_CENTERED ,600 ,600 ,false);
@@ -16,7 +134,7 @@ int main(int argc , char *argv[]){
         game->render();
     }
     game->clean();
-
+/*
 
 
 
