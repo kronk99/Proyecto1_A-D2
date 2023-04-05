@@ -13,7 +13,6 @@ using namespace std;
 int main(int argc , char *argv[]){
     constexpr const char* const SERIAL_PORT_1 = "/dev/ttyUSB0" ;
     SerialStream serial_stream ;
-
     try
     {
         // Open the Serial Port at the desired hardware port.
@@ -37,28 +36,45 @@ int main(int argc , char *argv[]){
     serial_stream.SetParity(Parity::PARITY_NONE) ;
 
     // Set the number of stop bits.
-    serial_stream.SetStopBits(StopBits::STOP_BITS_1) ;
 
-    // Wait for data to be available at the serial port.
-    /*
-    while(serial_stream.rdbuf()->in_avail() == 0)
-    {
-        usleep(1000);
+    serial_stream.SetStopBits(StopBits::STOP_BITS_1) ;
+    //CODIGO FUNCIONAL, PRIMER ARDUINO ENVIA A C++ PARA HACER LA COENXION
+    //LUEGO DE ESO C++ PUEDE ENVIAR LO QUE QUIERA.
+    while(serial_stream.rdbuf()->in_avail() == 0){
+        usleep(2000);
     }
-    int a=0;
-    // Keep reading data from serial port and print it to the screen.
     while(serial_stream.IsDataAvailable()){
-        // Variable to store data coming from the serial port.
         char data_byte ;
         // Read a single byte of data from the serial port.
         serial_stream.get(data_byte) ;
-        // Show the user what is being read from the serial port.
-        std::cout << data_byte<<endl ;
-        a++;
-        // Wait a brief period for more data to arrive.
+        if(data_byte =='R') { //esto me esta jodiendo los numeros
+            cout << "sistema listo" << endl;
+        }
     }
-    cout<<"el numero de ciclos es:"<<a<<endl;*/
+    //probar hacer un flush si no sirve
+    string numero ="el 8 es";
+    serial_stream<<numero<<std::endl;
+    serial_stream.DrainWriteBuffer();
+    /*
+    static  int loops = 0;
+    while(true){
+        if(loops<65){
+            string numero ="el 3 es";
+            cout<<"el tamaño es:"<<numero.size()<<endl;
+            serial_stream<<numero<<std::endl;
+            serial_stream.FlushOutputBuffer();
+            loops+=1;
+        }
+    }*/
 
+    //EL BUFER DE ARDUINO TIENE 64 BITS DE ESPACIO PARA LEER, puede ser por eso los
+    //64 loops
+    //OTRA VARIABLE A TOMAR EN CUENTA ES QUE PUEDE QUE LA CONEXION SE CAIGA MAS
+    //RAPIDO DE LO QUE ENVIA, POR ESO SE NECESITA EL CICLO WHILE.
+    //TRATAR DE METERLO A UN CICLO WHILE CON BANDERA QUE DURE 3 ITERACIONES 1
+    //INCLUSIVE, ESE VA TAMBIEN DENTRO UN CICLO WHILE INFINITO A VER SI ES ESO
+    //DE LA CONEXION
+/*CODIGO FUNCIONAL ACA ABAJO*******************************************
     int flag = 0;
     int cicles = 0;
     while(flag ==0){
@@ -84,22 +100,12 @@ int main(int argc , char *argv[]){
                     dato=dato * multiplier+variable;
 
                 }
-                /*
-                if(data_byte != '1'){
-                    std::cout << data_byte <<endl;
-                    cicles+=1;
-                }
-                else{
-                    cout<<"el numero impreso es el :"<<data_byte<<endl;
-                }*/
-                //cout<<"num ciclos"<<cicles<<endl;
-                //cout<<"numero de ciclos:"<<cicles<<endl;
-                // Wait a brief period for more data to arrive.
                 usleep(1000) ;
             }
             cout<<"el numero final es:"<<dato<<endl;
         }
-    }
+    }**********FIN DEL CODIGO FUNCIONAL*********************************
+    */
     // Successful program completion.
 
 // Create and open the serial port for communication.
@@ -134,19 +140,10 @@ int main(int argc , char *argv[]){
         game->render();
     }
     game->clean();
-/*
+*/
 
 
 
 
-    /*
-    SDL_Init(SDL_INIT_EVERYTHING);
-    SDL_Window *window = SDL_CreateWindow("title",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,600,400,SDL_WINDOW_SHOWN);
-    SDL_Renderer *render= SDL_CreateRenderer(window ,-1 ,0);
-    SDL_SetRenderDrawColor(render,0,255,0,255);
-    SDL_RenderClear(render);
-    SDL_RenderPresent(render);
-    SDL_Delay(3000);
-     */
-    return 0;
+
 }

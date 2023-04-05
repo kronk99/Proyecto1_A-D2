@@ -257,8 +257,7 @@ namespace LibSerial
         throw ;
     }
 
-    bool
-    SerialStream::IsOpen()
+    bool SerialStream::IsOpen()
     try
     {
         // Checks to see if mIOBuffer is a null buffer, if not, calls
@@ -275,8 +274,7 @@ namespace LibSerial
         throw ;
     }
 
-    void 
-    SerialStream::SetBaudRate(const BaudRate& baudRate)
+    void SerialStream::SetBaudRate(const BaudRate& baudRate)
     try
     {
         auto my_buffer = dynamic_cast<SerialStreamBuf *>(this->rdbuf()) ;
