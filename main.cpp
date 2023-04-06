@@ -7,10 +7,17 @@
 #include <unistd.h>
 #include "libserial/SerialStream.h"
 //#include <SDL2/SDL.h>
-using namespace LibSerial;
+#include <thread>
+#include "Juego.h"
 #include "Game.h"
 using namespace std;
 int main(int argc , char *argv[]){
+    Juego *juego = new Juego(); //debo hacer juego singleton para meterlo en
+    //el thread.
+    juego->setFlag();
+    thread juegos(&Juego::receiveMsg , *juego);
+    juegos.join();
+    /*
     constexpr const char* const SERIAL_PORT_1 = "/dev/ttyUSB0" ;
     SerialStream serial_stream ;
     try
@@ -141,7 +148,6 @@ int main(int argc , char *argv[]){
     }
     game->clean();
 */
-
 
 
 
