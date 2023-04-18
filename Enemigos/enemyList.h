@@ -15,7 +15,7 @@ private:
 public:
     enemyList(SDL_Renderer* render);
     void insertFirst();
-    void* getFirst();
+    enemigo* getFirst();
     void deleteFirst();
     int getSIze();
     void printList();

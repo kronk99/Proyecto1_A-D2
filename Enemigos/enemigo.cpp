@@ -56,3 +56,7 @@ void enemigo::update() {
 void enemigo::renderAll() {
     SDL_RenderCopy(render,enemySkin,&origen,&destino);
 }
+
+const SDL_Rect * enemigo::getRect() {
+    return &destino;
+}

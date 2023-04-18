@@ -40,6 +40,7 @@ void Game::update() {
     //que se meta al if, y le haga player->updatePos
     //ACTUALIZA LA POSICION Y MOVIMIENTO DE IMAGENES.
     player->Update();
+    verifyCollision();
 }
 void Game::render() {
     /* render, a lo que entiendo que hace, es como un tazon donde se añaden cosas
@@ -94,3 +95,19 @@ void Game::clean() {
 bool Game::running() {
     return isRunning;
 }
+void Game::verifyCollision(){
+    if(SDL_HasIntersection(player->getRect(), pruebaenemigo->getFirst()->getRect())){
+        cout<<"hay colision papa"<<endl;
+    }
+    //aca debo de decirle agarre la lista de bullets in screen
+    //y list currentlist = enemyhndlr.getlist , este metodo dice que fase esta,
+    //estoy en fase 1, ok agarreme el array1 , y en que oleada estoy 1.
+    //retorne la lista en el posicion 1.
+
+}
+//hacer un metodo aca tipo clasifi arduino, que lea del arduino y redistribuya la
+//data que reciba segun correstponda, tipo es un numero del 1 al 1024, entonces
+//modifiqueselo al atributo speed, que va a ser el delay de chrono en el metodo
+//de player que dispara bullets, el metodo de disparar es basicamente que cada
+//cierto tiempo agarra la bullet , la pone en la lista de bulletINdisplay y ahi
+//ña dobuja

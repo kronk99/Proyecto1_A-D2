@@ -23,7 +23,7 @@ void enemyList::insertFirst() {
     }
 }
 
-void *enemyList::getFirst() {
+enemigo* enemyList::getFirst() {
     return head;
 }
 

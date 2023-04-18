@@ -15,10 +15,12 @@ private:
     SDL_Rect origen , destino;
     SDL_Renderer* render;
 
+
 public:
     Player(const char* texture , SDL_Renderer* renders);
     void Update();
     void renderAll();
+    SDL_Rect*  getRect();
 };
 
 

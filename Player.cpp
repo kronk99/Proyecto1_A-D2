@@ -10,11 +10,12 @@ Player::Player(const char* texture , SDL_Renderer* renders) {
     //playerSkin= SDL_CreateTextureFromSurface(render , p);
     //SDL_FreeSurface(p); CAMBIE all this
     posx=0;
-    posy=0;
+    posy=100;
+
 }
 void Player::Update() {
     posx+=1; //esto es lo que debe de cambiarse al leer el arduino
-    posy+=1;//esto es lo que debe de cambiarse al leer el arduino
+    //posy+=1;//esto es lo que debe de cambiarse al leer el arduino
     origen.x=0; //centro de la imagen
     origen.y=0;//centro de la imagen
     origen.h=375; //tamaño x de la imagen
@@ -27,4 +28,7 @@ void Player::Update() {
 }
 void Player::renderAll() {
     SDL_RenderCopy(render,playerSkin,&origen,&destino);
+}
+ SDL_Rect*  Player::getRect(){
+    return &destino;
 }

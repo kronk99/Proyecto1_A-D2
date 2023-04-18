@@ -29,5 +29,7 @@ public:
     void setnext(enemigo* enemigos);
     void update();
     void renderAll();
+    const SDL_Rect * getRect();
+
 };
 #endif //PROYECTO1_A_D2_ENEMIGO_H

@@ -23,6 +23,7 @@ public:
     void clean();
     void eventHandler();
     bool running();
+    void verifyCollision();
 };
 
 

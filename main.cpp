@@ -41,13 +41,14 @@ int main(int argc , char *argv[]){
             SDL_Delay(frameDelay-frametime);
         }
     }
-    /*ACA INICIA EL CODIGO DE PRUEBA DEL HILO DE ESCUCHA.
+/*
     Juego *juego = new Juego(); //debo hacer juego singleton para meterlo en
     //el thread.
     juego->setFlag();
     thread juegos(&Juego::receiveMsg , *juego);
-    juegos.join();*/
-    /*HASTA ACA TERMINA EL HILO DE ESCUCHA DE ARDUINO**************
+    juegos.join();
+*/
+/* CODIGO PRUEBA ENVIAR A ARDUINO
     constexpr const char* const SERIAL_PORT_1 = "/dev/ttyUSB0" ;
     SerialStream serial_stream ;
     try
@@ -91,7 +92,7 @@ int main(int argc , char *argv[]){
     //probar hacer un flush si no sirve
     string numero ="el 8 es";
     serial_stream<<numero<<std::endl;
-    serial_stream.DrainWriteBuffer();
+    serial_stream.DrainWriteBuffer();ACA TERMINA CODIGO PRUEBA ENVIAR ARDUINO*/
     /*
     static  int loops = 0;
     while(true){
