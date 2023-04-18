@@ -11,6 +11,9 @@ void Juego::receiveMsg() {
     int a;
     while(flag==true){
          a = hndlr->receivefromArduino();
+         //aca haga el switch case con el valor que retorna arduino handler
+         //si es 0<1024 llame al metodo que cambia valor de las balas
+         //si es  llame a move_u
     }
     cout<<a<<endl;
 }

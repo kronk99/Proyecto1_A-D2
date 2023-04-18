@@ -5,6 +5,8 @@
 using namespace std;
 #include "Game.h"
 #include <iostream>
+SDL_Rect Origen ,DEST ;
+SDL_Texture *textures;
 Game::Game() {
 }
 void Game::init(const char *title, int posx, int posy, int width, int lenght, bool fullscreen) {
@@ -20,26 +22,46 @@ void Game::init(const char *title, int posx, int posy, int width, int lenght, bo
         cout<<"ventana creada exitosamente"<<endl;
         renderer = SDL_CreateRenderer(window , -1, 0);
         SDL_SetRenderDrawColor(renderer, 255,255,255,255);
+        //esto dice dibujele color encima a renderer, los colores 250,255,255,255
         isRunning = true;
     }
     else{
         cout<<"no se creo bien la ventana de juego"<<endl;
         isRunning = false;
     }
+    player = new Player("../textures/a.png",renderer);
+    pruebaenemigo = new enemyList(renderer);
+    pruebaenemigo->insertFirst();
 
 }
-void Game::update() {}
+void Game::update() {
+    //aca deberia de meterle un metodo que sea handle arduino, entonces
+    //deberia de checkear aca el arduino, si retorna algo diferente de -10
+    //que se meta al if, y le haga player->updatePos
+    //ACTUALIZA LA POSICION Y MOVIMIENTO DE IMAGENES.
+    player->Update();
+}
 void Game::render() {
     /* render, a lo que entiendo que hace, es como un tazon donde se añaden cosas
      * ese "tazon" de cosas para renderizar , las presenta como una imagen completa
      * por lo que entiendo no lo "redibuja " por encima, de ahi el render clear
      * limpia lo que tiene ese tazon y render present, presenta en pantalla lo que
      * contenga render*/
+    //renderer es la ventana
     SDL_RenderClear(renderer);
+    //donde lo quiero poner, que poner, rectangulo de la imagen(si usar un recorte
+    // o la imagen completa), rectangulo donde
+    //ponerlo en la pantala
+    //SDL_RenderCopy(renderer,textures,NULL,NULL);
     //aca es cuando le ponemos cosas a render, para que renderize en pantalla,
+    player->renderAll();
+    pruebaenemigo->moveNrender();
     SDL_RenderPresent(renderer);
+    /*aca debo de poner load balas a cada rato , ese metodo debe de checkear
+     * la lista de cartuchos, agarrar una bala y usarla.*/
 
 }
+//codigo funcional ahora por alguna razon
 void Game::eventHandler() { //no funciona de momento bien
     //funcion que maneja eventos
     SDL_Event evento ;

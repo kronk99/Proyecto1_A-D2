@@ -10,14 +10,44 @@
 #include <thread>
 #include "Juego.h"
 #include "Game.h"
+#include "Lista.h"
 using namespace std;
 int main(int argc , char *argv[]){
+    /*
+    Lista* lista = new Lista();
+    lista->insertFirst();
+    lista->printList();
+    lista->printCollector();
+    lista->recicleBullet();
+    lista->printList();
+    lista->printCollector();*/
+
+    const int fps=60;
+    const int frameDelay = 1000/fps;
+    Uint32 frameStart;
+    int frametime;
+    Game *game = new Game();
+    //hice el init como el verdadero constructor de la ventana de juegoxd.
+    game->init("juego1" , SDL_WINDOWPOS_CENTERED , SDL_WINDOWPOS_CENTERED ,600 ,600 ,false);
+    while(game->running()){
+        frameStart=SDL_GetTicks();
+        game->eventHandler();
+        game->update();
+        game->render();
+        frametime = SDL_GetTicks()-frameStart;
+        if(frameDelay>frametime){
+            //este delay debe de ser ajustado para la velocidad del juego
+            //o las balas.
+            SDL_Delay(frameDelay-frametime);
+        }
+    }
+    /*ACA INICIA EL CODIGO DE PRUEBA DEL HILO DE ESCUCHA.
     Juego *juego = new Juego(); //debo hacer juego singleton para meterlo en
     //el thread.
     juego->setFlag();
     thread juegos(&Juego::receiveMsg , *juego);
-    juegos.join();
-    /*
+    juegos.join();*/
+    /*HASTA ACA TERMINA EL HILO DE ESCUCHA DE ARDUINO**************
     constexpr const char* const SERIAL_PORT_1 = "/dev/ttyUSB0" ;
     SerialStream serial_stream ;
     try

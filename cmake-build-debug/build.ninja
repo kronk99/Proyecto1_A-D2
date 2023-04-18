@@ -79,11 +79,11 @@ build CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialPort.cpp.o: CXX_COMPILER__Pr
   OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
   OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir/libserial
 
-build CMakeFiles/Proyecto1_A_D2.dir/enemigo.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/enemigo.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
-  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/enemigo.cpp.o.d
+build CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemigo.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Enemigos/enemigo.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemigo.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
   OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir/Enemigos
 
 build CMakeFiles/Proyecto1_A_D2.dir/arduinoHndlr.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/arduinoHndlr.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
   DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/arduinoHndlr.cpp.o.d
@@ -97,6 +97,54 @@ build CMakeFiles/Proyecto1_A_D2.dir/Juego.cpp.o: CXX_COMPILER__Proyecto1_A_D2_De
   OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
   OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
 
+build CMakeFiles/Proyecto1_A_D2.dir/textureLoader.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/textureLoader.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/textureLoader.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+
+build CMakeFiles/Proyecto1_A_D2.dir/Player.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Player.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Player.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+
+build CMakeFiles/Proyecto1_A_D2.dir/Lista.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Lista.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Lista.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+
+build CMakeFiles/Proyecto1_A_D2.dir/Bullet.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Bullet.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Bullet.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+
+build CMakeFiles/Proyecto1_A_D2.dir/Bnode.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Bnode.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Bnode.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+
+build CMakeFiles/Proyecto1_A_D2.dir/BList.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/BList.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/BList.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+
+build CMakeFiles/Proyecto1_A_D2.dir/Bcollector.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Bcollector.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Bcollector.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir
+
+build CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyList.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Enemigos/enemyList.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyList.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir/Enemigos
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Proyecto1_A_D2
@@ -105,9 +153,9 @@ build CMakeFiles/Proyecto1_A_D2.dir/Juego.cpp.o: CXX_COMPILER__Proyecto1_A_D2_De
 #############################################
 # Link the executable Proyecto1_A_D2
 
-build Proyecto1_A_D2: CXX_EXECUTABLE_LINKER__Proyecto1_A_D2_Debug CMakeFiles/Proyecto1_A_D2.dir/main.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Game.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStream.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStreamBuf.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialPort.cpp.o CMakeFiles/Proyecto1_A_D2.dir/enemigo.cpp.o CMakeFiles/Proyecto1_A_D2.dir/arduinoHndlr.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Juego.cpp.o
+build Proyecto1_A_D2: CXX_EXECUTABLE_LINKER__Proyecto1_A_D2_Debug CMakeFiles/Proyecto1_A_D2.dir/main.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Game.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStream.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStreamBuf.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialPort.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemigo.cpp.o CMakeFiles/Proyecto1_A_D2.dir/arduinoHndlr.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Juego.cpp.o CMakeFiles/Proyecto1_A_D2.dir/textureLoader.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Player.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Lista.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bullet.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bnode.cpp.o CMakeFiles/Proyecto1_A_D2.dir/BList.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bcollector.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyList.cpp.o
   FLAGS = -g
-  LINK_LIBRARIES = -lSDL2main  -lSDL2
+  LINK_LIBRARIES = -lSDL2main  -lSDL2  -lSDL2_image
   OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -119,7 +167,7 @@ build Proyecto1_A_D2: CXX_EXECUTABLE_LINKER__Proyecto1_A_D2_Debug CMakeFiles/Pro
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/cmake-build-debug && /snap/clion/233/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/cmake-build-debug && /snap/clion/234/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -130,7 +178,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/cmake-build-debug && /snap/clion/233/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2 -B/home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/cmake-build-debug
+  COMMAND = cd /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/cmake-build-debug && /snap/clion/234/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2 -B/home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -157,14 +205,14 @@ build all: phony Proyecto1_A_D2
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/CMakeLists.txt /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-C.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/CMakeLists.txt /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-C.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/CMakeLists.txt /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-C.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /snap/clion/233/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
+build /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/CMakeLists.txt /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-C.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /snap/clion/234/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
 
 
 #############################################
