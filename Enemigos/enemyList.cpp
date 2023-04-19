@@ -4,12 +4,13 @@
 
 #include "enemyList.h"
 
-enemyList::enemyList(SDL_Renderer *renders) {
+enemyList::enemyList() {
     this->size=0;
-    render = renders;
     head = nullptr;
     current= nullptr;
+    size2=0;
 }
+//hacer un metodo setRender y quitar el sdl renderer a enemyList
 void enemyList::insertFirst() {
     if(size != 0){ /**si el tamaño de la lista es diferente de 0*/
         enemigo *newnode = new enemigo("../textures/Spaceship.png",render); /**cree un nuevo nodo, sobrecargando la operacion new*/
@@ -21,6 +22,7 @@ void enemyList::insertFirst() {
         this->head =new enemigo("../textures/Spaceship.png",render);
         size++;
     }
+    current2=head;
 }
 
 enemigo* enemyList::getFirst() {
@@ -36,6 +38,7 @@ void enemyList::deleteFirst() {
         delete current; //deberia de sobrecargarse
         cout<<"se pudo pasar el delete de la lista"<<endl;
         size--;
+        current2=head;
     }
     else{
         cout<<"lista vacia"<<endl;
@@ -51,11 +54,35 @@ void enemyList::printList() {
 void enemyList::moveNrender(){
     //int oleada = size;
     current=head;
-    for(int a=0;a<=size;a++){
+    for(int a=0;a<size;a++){
+        cout<<"moviendo el current"<<current<<endl;
         current->update();
         current->renderAll();
         current=current->getnext();
+        //sera que tengo que meterle un render clean ?
     }
+}
+void enemyList::setRender(SDL_Renderer *renders){
+    render =renders;
+}
+
+void enemyList::createEnemyes(int number) {
+    for(int i=0;i<number;i++){
+        insertFirst();
+
+    }
+    cout<<"se crearon"<<number<<"enemigos"<<endl;
+}
+enemigo *enemyList::getFirstX() {
+    if(size2 <= size){
+    }
+}
+enemigo *enemyList::search(int number) {
+    current = head;
+    for(int a=0;a<size;a++){
+        current = current->getnext();
+    }
+    return current;
 }
 //OCUPO ACA UN METODO RENDER ALL QUE RECORRA LA LISTA Y RENDERIZE , CON UN CICLO FOR.
 //Y ocupo tambien un metodo moveALL que recorra la lista y mueva el rectangulo

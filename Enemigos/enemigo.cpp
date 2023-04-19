@@ -34,11 +34,14 @@ void enemigo::setnext(enemigo* enemigos) {
 }
 
 enemigo::enemigo(const char *texture, SDL_Renderer *renders) {
+    random_device rd;
+    std::uniform_int_distribution<int>randomx(1,350);
+    std::uniform_int_distribution<int>randomy(10,520);
     render = renders;
     enemySkin=textureLoader::getTextureloader()->Loadtexture(texture , render);
     //estos posx pos y deben de ser a la izquierda de la imagen, y aleatorios
-    pos_X=600;
-    pos_Y=100;
+    pos_X=600+randomx(rd);
+    pos_Y=randomy(rd); //por ahora no METO EL RANDOM Y.
     origen.x=0; //centro de la imagen
     origen.y=0;//centro de la imagen
     origen.h=351; //tamaño x de la imagen

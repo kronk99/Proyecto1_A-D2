@@ -6,7 +6,8 @@
 #define PROYECTO1_A_D2_GAME_H
 //#include <SDL2/SDL.h> lo quito por que ya player.h lo incluye.
 #include "Player.h"
-#include "Enemigos/enemyList.h"
+#include "Enemigos/enemyHndlr.h"
+//#include "Enemigos/enemyList.h"
 class Game {
 private:
     bool isRunning;
@@ -14,7 +15,8 @@ private:
     SDL_Renderer *renderer;
     SDL_Texture *texture;
     Player *player;
-    enemyList* pruebaenemigo;
+    enemyHndlr* Fases;
+    //enemyList* pruebaenemigo;
 public:
     Game();
     void init(const char *title ,int posx , int posy , int width , int lenght ,bool fullscreen);

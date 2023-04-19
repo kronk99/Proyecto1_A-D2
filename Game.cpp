@@ -30,8 +30,8 @@ void Game::init(const char *title, int posx, int posy, int width, int lenght, bo
         isRunning = false;
     }
     player = new Player("../textures/a.png",renderer);
-    pruebaenemigo = new enemyList(renderer);
-    pruebaenemigo->insertFirst();
+    Fases=new enemyHndlr(renderer);
+    Fases->buildEnemies();
 
 }
 void Game::update() {
@@ -40,7 +40,7 @@ void Game::update() {
     //que se meta al if, y le haga player->updatePos
     //ACTUALIZA LA POSICION Y MOVIMIENTO DE IMAGENES.
     player->Update();
-    verifyCollision();
+    //verifyCollision();
 }
 void Game::render() {
     /* render, a lo que entiendo que hace, es como un tazon donde se añaden cosas
@@ -56,11 +56,10 @@ void Game::render() {
     //SDL_RenderCopy(renderer,textures,NULL,NULL);
     //aca es cuando le ponemos cosas a render, para que renderize en pantalla,
     player->renderAll();
-    pruebaenemigo->moveNrender();
+    Fases->getFase().moveNrender();
     SDL_RenderPresent(renderer);
     /*aca debo de poner load balas a cada rato , ese metodo debe de checkear
      * la lista de cartuchos, agarrar una bala y usarla.*/
-
 }
 //codigo funcional ahora por alguna razon
 void Game::eventHandler() { //no funciona de momento bien
@@ -93,12 +92,24 @@ void Game::clean() {
     cout<<"el juego se ha limpiado"<<endl;
 }
 bool Game::running() {
-    return isRunning;
+    if(Fases->wincon() !=0){
+        return isRunning;
+    }
+    else{
+        return false;
+    }
 }
 void Game::verifyCollision(){
-    if(SDL_HasIntersection(player->getRect(), pruebaenemigo->getFirst()->getRect())){
-        cout<<"hay colision papa"<<endl;
+    int length = Fases->getFase().getSIze();
+    for(int a=0; a<=length;a++){
+        if(SDL_HasIntersection(player->getRect(), Fases->getFase().search(length)->getRect())){
+            cout << "hay colision papa" << endl;
+        }
     }
+    //aca debe de ir el ciclo for doble para las balas y los enemigos.
+    //if(SDL_HasIntersection(player->getRect(), pruebaenemigo->getFirst()->getRect())){
+       // cout<<"hay colision papa"<<endl;
+    //}
     //aca debo de decirle agarre la lista de bullets in screen
     //y list currentlist = enemyhndlr.getlist , este metodo dice que fase esta,
     //estoy en fase 1, ok agarreme el array1 , y en que oleada estoy 1.

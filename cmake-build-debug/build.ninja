@@ -145,6 +145,12 @@ build CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyList.cpp.o: CXX_COMPILER__Proy
   OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
   OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir/Enemigos
 
+build CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyHndlr.cpp.o: CXX_COMPILER__Proyecto1_A_D2_Debug /home/huevitoentorta/Documentos/C++/proyecto1/Proyecto1_A-D2/Enemigos/enemyHndlr.cpp || cmake_object_order_depends_target_Proyecto1_A_D2
+  DEP_FILE = CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyHndlr.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto1_A_D2.dir/Enemigos
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Proyecto1_A_D2
@@ -153,7 +159,7 @@ build CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyList.cpp.o: CXX_COMPILER__Proy
 #############################################
 # Link the executable Proyecto1_A_D2
 
-build Proyecto1_A_D2: CXX_EXECUTABLE_LINKER__Proyecto1_A_D2_Debug CMakeFiles/Proyecto1_A_D2.dir/main.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Game.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStream.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStreamBuf.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialPort.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemigo.cpp.o CMakeFiles/Proyecto1_A_D2.dir/arduinoHndlr.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Juego.cpp.o CMakeFiles/Proyecto1_A_D2.dir/textureLoader.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Player.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Lista.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bullet.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bnode.cpp.o CMakeFiles/Proyecto1_A_D2.dir/BList.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bcollector.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyList.cpp.o
+build Proyecto1_A_D2: CXX_EXECUTABLE_LINKER__Proyecto1_A_D2_Debug CMakeFiles/Proyecto1_A_D2.dir/main.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Game.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStream.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialStreamBuf.cpp.o CMakeFiles/Proyecto1_A_D2.dir/libserial/SerialPort.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemigo.cpp.o CMakeFiles/Proyecto1_A_D2.dir/arduinoHndlr.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Juego.cpp.o CMakeFiles/Proyecto1_A_D2.dir/textureLoader.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Player.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Lista.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bullet.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bnode.cpp.o CMakeFiles/Proyecto1_A_D2.dir/BList.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Bcollector.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyList.cpp.o CMakeFiles/Proyecto1_A_D2.dir/Enemigos/enemyHndlr.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lSDL2main  -lSDL2  -lSDL2_image
   OBJECT_DIR = CMakeFiles/Proyecto1_A_D2.dir

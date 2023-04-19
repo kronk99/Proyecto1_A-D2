@@ -10,17 +10,24 @@ class enemyList {
 private:
     enemigo *head;
     enemigo *current;
+    enemigo *current2;
     int size;
+    int size2;
     SDL_Renderer* render;
 public:
-    enemyList(SDL_Renderer* render);
+    enemyList();
     void insertFirst();
     enemigo* getFirst();
+    enemigo* getFirstX();
     void deleteFirst();
     int getSIze();
     void printList();
     void moveNrender();
+    void setRender(SDL_Renderer *renders);
     //un metodo checkcolision.
+    void createEnemyes(int number);
+
+    enemigo *search(int number);
 };
 
 

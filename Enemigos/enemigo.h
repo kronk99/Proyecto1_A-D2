@@ -7,6 +7,7 @@
 #include <string>
 #include <SDL2/SDL.h>
 #include "../textureLoader.h"
+#include <random>
 using namespace std;
 class enemigo {
 private:
